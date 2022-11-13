@@ -12,7 +12,11 @@ html{
 }
 body{
     background: url(./pics/pics/bg-body.jpg);
-    padding: 50px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    padding-top: 50px;
+    padding-bottom: 300px;
 }
 
 header{
@@ -38,21 +42,20 @@ header{
     list-style-type: none;
 }
 #navbar>ul>li{
-    width: 19.9999%;
     float: left;
-    text-align: center;
+    text-align: justify;
     
 }
 #navbar ul li a{
     color: white;
     text-decoration: none;
-    text-transform: uppercase;
     padding: 20px;
     display: block;
+    text-transform: lowercase;
 }
 #navbar ul li a:hover {
-    background-color: blue;
-    color: palevioletred;
+    background-color: rgba(17, 1, 1, 0.9);
+    color: white;
 }
 .sub{
     position: relative;
@@ -61,17 +64,19 @@ header{
     display: none;
     position: absolute;
     left: 0;
-    right: 0;
+    width: 200px;
+    text-transform: lowercase;
+
 }
 .sub:hover .submenu{
     display: block;
-    background-color: #5473b4;
+    background-color: rgb(190,0,0);
     color: white;
 }
-.sub::after{
+#navbar .sub::after{
     position: absolute;
-    right: 50px;
-    top: 20px;
+    left: 80px;
+    top: 24px;
     color: white;
     content: "🢗";
 }
@@ -101,9 +106,23 @@ header{
     display: table;
 }
 footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     margin: 0 auto;
     text-align: center;
-    padding: 60px;
-    background-color: white;
-    font-size: .8em;
+    height: 50px;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    padding-top: 17px;
+
+}
+footer #ok{
+    padding: 5px 5px;
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    margin-left: 10px;
 }
